@@ -1,0 +1,28 @@
+import discord
+from bot_logic import gen_pass
+from discord.ext import commands
+@bot.command()
+async def idea(ctx):
+    with open('images/image6.png', 'rb') as f:
+        # Dönüştürülen Discord kütüphane dosyasını bu değişkende saklayalım!
+        picture = discord.File(f)
+   # Daha sonra bu dosyayı bir parametre olarak gönderebiliriz!
+    await ctx.send(file=picture)
+
+@bot.command()
+async def idea1(ctx):
+    with open('images/image7.png', 'rb') as f:
+        # Dönüştürülen Discord kütüphane dosyasını bu değişkende saklayalım!
+        picture = discord.File(f)
+   # Daha sonra bu dosyayı bir parametre olarak gönderebiliriz!
+    await ctx.send(file=picture)
+
+
+
+@bot.command()
+async def atıklar(ctx):
+    await ctx.send(f'Merhaba atıklarını değerlendirmek istiyorsan idea,idea1,idea2,idea3  birini seçerek fikirlerimizden yararlanabilirsin:)')
+
+
+
+bot.run(token)
